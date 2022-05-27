@@ -5,4 +5,12 @@ services:
 script:
   - docker build -t lydiatao/node .
   - docker images lydiatao/node
-  
+
+before_deploy:
+   - docker login -u <lydiatao> -p <Harvard170802!>
+
+deploy:
+  provider: script
+  script: docker push lydiatao/node
+  on:
+    branch: master
