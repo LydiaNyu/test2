@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t lydianyu/node .
-  - docker images lydianyu/node
+  - docker build -t lydiatao/node .
+  - docker images lydiatao/node
 
 before_deploy:
    - docker login -u <lydiatao> -p <Harvard170802!>
